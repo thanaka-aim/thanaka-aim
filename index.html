@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
+  <title>VR view</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  test
+    <div id="vrview"></div>
+    <script>
+      window.addEventListener('load', onVrViewLoad);
+        function onVrViewLoad() {
+        var vrView = new VRView.Player('#vrview', {
+            image: 'https://thanaka-aim.github.io/thanaka-aim/fbc36a5e-0d0e.jpg',
+            is_stereo: true,
+            width:'100%',
+            height:'600px',
+        });
+      }
+    </script>
+    <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
 </body>
+
 </html>
